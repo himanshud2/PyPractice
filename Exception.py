@@ -1,7 +1,8 @@
 number=input("Enter the Number:")
-
 try:
   x=int(number)
-  print("Number:",x)
+  print("Number:",number)
 except:
-  print("Invalid Number")
+  print("Invalid Input")
+finally:
+  print("BYE!!")
