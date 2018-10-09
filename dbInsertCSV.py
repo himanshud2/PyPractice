@@ -13,13 +13,14 @@ def displayAllData():
 		if(result!=None):
 			list=[]
 			list.append(result)
+			writer=csv.writer(csvfile)
+			writer.writerows(list)		#-> writes according to each list object
 			print(list)
+			#writer2=csv.writer(csvfile2)
+			#writer2.writerows(result)		->writes according to tuple individual content in csv file(new Line)
 		else:
 			break
-		writer=csv.writer(csvfile)
-		writer.writerows(list)
-		writer2=csv.writer(csvfile2)
-		writer2.writerows(result)
+		
 	csvfile.close()
 	
 displayAllData()
